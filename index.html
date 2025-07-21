@@ -190,35 +190,27 @@
         .modal-nav-button.next {
             right: 1rem;
         }
+
+        /* Styling for main section headings */
+        .main-section-heading {
+            border-bottom: 3px solid #00B4D8; /* Accent blue underline */
+            padding-bottom: 0.75rem; /* Spacing below the line */
+            margin-bottom: 2.5rem; /* More space before content */
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
     <!-- 
         Narrative Plan Summary:
-        1. Introduction/Hook: Importance of PDPA.
-        2. PDPA Landscape: Why organizations must care (Benefits).
-        3. Data Handling Trends & Departmental Roles: Common data types, purposes, departmental responsibilities.
-        4. Focus on IT: IT's crucial role.
-        5. Security Technology Adoption: Technical, Physical, Administrative measures.
-        6. Key Process Flows: Data Subject Rights Management, Backup policies.
-        7. Conclusion: Future of data protection.
+        This document serves as a comprehensive guide for Suppliers Audit Preparation and Practice.
+        It is structured into main sections covering Labor, Health, Safety and Environment, and Ethical Business Practice.
+        Each main section contains sub-sections with relevant information, including image carousels for visual documentation.
 
         Color Palette Chosen: Brilliant Blues
         - Main Blue: #0077B6
         - Accent Blue: #00B4D8
         - Light Blue: #90E0EF
         - Very Light Blue/Background Accent: #CAF0F8
-
-        Visualization Choices Summary:
-        - Section 1: Big Number (HTML/CSS)
-        - Section 2: Styled Cards (HTML/CSS)
-        - Section 3: Donut Chart (Chart.js) for data types, HTML/CSS cards for departmental checks.
-        - Section 4: Styled text, potentially a Bar Chart (Chart.js) for IT's role (using mock data).
-        - Section 5: Radar Chart (Chart.js) for technical measures; HTML/CSS cards/lists for all three types of measures.
-        - Section 6: HTML/CSS Flowchart for DSAR; Donut Chart (Chart.js) for backup factors.
-        - Section 7: Styled text summary.
-
-        Confirmation: NEITHER Mermaid JS NOR SVG were used. All diagrams/charts are HTML/CSS or Chart.js (Canvas).
     -->
 
     <nav class="sticky-nav shadow-md">
@@ -226,37 +218,9 @@
         <div class="container mx-auto px-4 py-3 flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 md:gap-x-6 lg:gap-x-8
                     max-h-14 overflow-y-hidden transition-all duration-500 ease-in-out hover:max-h-96 hover:overflow-y-auto">
             <a href="#intro" class="nav-link">บทนำ</a>
-            <a href="#contract-example" class="nav-link">ตัวอย่างสัญญาจ้างแรงงาน</a>
-            <a href="#labor-requirements" class="nav-link">ข้อกำหนดด้านแรงงาน</a>
-            <a href="#child-forced-labor" class="nav-link">แรงงานเด็ก แรงงานบังคับ</a>
-            <a href="#wage-working-hours" class="nav-link">การจ่ายค่าจ้าง ชั่วโมงการทำงาน</a>
-            <a href="#welfare-committee" class="nav-link">คณะกรรมการสวัสดิการฯ / สหภาพแรงงาน</a>
-            <a href="#fair-punishment" class="nav-link">การลงโทษอย่างเป็นธรรม</a>
-            <a href="#employee-handbook" class="nav-link">คู่มือพนักงาน</a>
-            <a href="#training-records" class="nav-link">บันทึกการฝึกอบรม</a>
-            <a href="#licenses-certificates" class="nav-link">ใบอนุญาต ใบรับรอง</a>
-            <a href="#emergency-plan" class="nav-link">แผนและฝึกซ้อมตอบสนองสถานการณ์ฉุกเฉิน</a>
-            <a href="#wage-calculation-example" class="nav-link">ตัวอย่างการคำนวณการจ่ายค่าจ้าง</a>
-            <a href="#tax-social-security-example" class="nav-link">ตัวอย่างวิธีการหักภาษี ประกันสังคม</a>
-            <a href="#ohse" class="nav-link">อาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม</a>
-            <a href="#bp-coc-compliance" class="nav-link">ความสอดคล้องต่อข้อกําหนด BP CoC</a>
-            <a href="#legal-compliance" class="nav-link">การปฏิบัติตามกฎหมาย</a>
-            <a href="#business-ethics" class="nav-link">จรรยาบรรณทางธุรกิจ</a>
-            <a href="#prohibited-practices" class="nav-link">หลักปฏิบัติที่ต้องห้ามทางธุรกิจ</a>
-            <a href="#personal-data" class="nav-link">ข้อมูลส่วนบุคคล</a>
-            <a href="#data-security" class="nav-link">การรักษาความปลอดภัยของข้อมูล</a>
-            <a href="#trade-compliance" class="nav-link">การปฏิบัติตามข้อกําหนดทางการค้า</a>
-            <a href="#risk-management" class="nav-link">การบริหารความเสี่ยง</a>
-            <a href="#management-system" class="nav-link">ระบบบการจัดการฯ</a>
-            <a href="#policies-announcements" class="nav-link">ประกาศ นโยบายด้านต่างๆ</a>
-            <a href="#child-labor-employment" class="nav-link">การจ้างแรงงานเด็ก</a>
-            <a href="#employee-welfare" class="nav-link">สวัสดิการพนักงาน</a>
-            <a href="#occupational-health-safety" class="nav-link">อาชีวอนามัย ความปลอดภัย</a>
-            <a href="#labor-relations" class="nav-link">แรงงานสัมพันธ์</a>
-            <a href="#environment" class="nav-link">สภาพแวดล้อม</a>
-            <a href="#training" class="nav-link">การฝึกอบรม</a>
-            <a href="#discrimination-harassment" class="nav-link">การเลือกปฏิบัติและการล่วงละเมิดในที่ทำงาน</a>
-            <a href="#subcontractors" class="nav-link">ผู้รับเหมาช่วง</a>
+            <a href="#labor-section" class="nav-link">Labor แรงงาน</a>
+            <a href="#health-safety-environment-section" class="nav-link">Health, Safety and Environment</a>
+            <a href="#ethical-business-practice-section" class="nav-link">Ethical Business Practice จรรยาบรรณทางธุรกิจ</a>
         </div>
     </nav>
 
@@ -274,472 +238,350 @@
             </div>
         </section>
 
-        <!-- Section for "ตัวอย่างสัญญา จ้างแรงงาน" -->
-        <section id="contract-example" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ตัวอย่างสัญญา จ้างแรงงาน</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับตัวอย่างสัญญาจ้างแรงงานที่นี่</p>
-            </div>
-        </section>
+        <!-- Main Section: Labor แรงงาน -->
+        <section id="labor-section" class="py-12 sm:py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12 main-section-heading">Labor แรงงาน</h2>
 
-        <!-- Section for "ข้อกําหนด ด้านแรงงาน" -->
-        <section id="labor-requirements" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อกําหนด ด้านแรงงาน</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับข้อกำหนดด้านแรงงานที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "แรงงานเด็ก แรงงานบังคับ การเลือกปฏิบัติ" -->
-        <section id="child-forced-labor" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">แรงงานเด็ก แรงงานบังคับ การเลือกปฏิบัติ</h2>
-            <div class="px-4 sm:px-6 lg:px-8 py-4">
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารแรงงานเด็ก แรงงานบังคับ</h3>
-            </div>
-            <div id="childForcedLaborCarousel" class="carousel-container">
-                <!-- Slides for Child/Forced Labor -->
-                <div class="carousel-slide active">
-                    <img src="https://img2.pic.in.th/pic/3.-_Page1.jpg" alt="Child Forced Labor Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แรงงานเด็ก แรงงานบังคับ - หน้า 1</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/3.-_Page2.jpg" alt="Child Forced Labor Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แรงงานเด็ก แรงงานบังคับ - หน้า 2</p>
-                </div>
-
-                <!-- Navigation buttons -->
-                <button class="carousel-nav-button prev">&#10094;</button>
-                <button class="carousel-nav-button next">&#10095;</button>
-
-                <!-- Dots for navigation -->
-                <div class="carousel-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section for "การจ่ายค่าจ้าง ชัวโมงการทํางาน" -->
-        <section id="wage-working-hours" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การจ่ายค่าจ้าง ชั่วโมงการทำงาน</h2>
-            <div class="px-4 sm:px-6 lg:px-8 py-4">
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารการจ่ายค่าจ้างและชั่วโมงการทำงาน</h3>
-            </div>
-            <div id="wageWorkingHoursCarousel" class="carousel-container">
-                <!-- Slides for Wage and Working Hours -->
-                <div class="carousel-slide active">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/4.-_Page1.jpg" alt="Wage and Working Hours Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">การจ่ายค่าจ้าง ชั่วโมงการทำงาน - หน้า 1</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/4.-_Page2.jpg" alt="Wage and Working Hours Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">การจ่ายค่าจ้าง ชั่วโมงการทำงาน - หน้า 2</p>
-                </div>
-
-                <!-- Navigation buttons -->
-                <button class="carousel-nav-button prev">&#10094;</button>
-                <button class="carousel-nav-button next">&#10095;</button>
-
-                <!-- Dots for navigation -->
-                <div class="carousel-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section for "ข้อกําหนด ด้านคณะกรรมการสวัสดิการฯ / สหภาพแรงงาน" -->
-        <section id="welfare-committee" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อกําหนด ด้านคณะกรรมการสวัสดิการฯ / สหภาพแรงงาน</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับคณะกรรมการสวัสดิการฯ และสหภาพแรงงานที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "ข้อกำหนดเกี่ยวกับการลงโทษอย่างเป็นธรรม" -->
-        <section id="fair-punishment" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อกำหนดเกี่ยวกับการลงโทษอย่างเป็นธรรม</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับข้อกำหนดการลงโทษอย่างเป็นธรรมที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "คู่มือพนักงาน (เงื่อนไขและข้อกำหนดการจ้างงาน)" -->
-        <section id="employee-handbook" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">คู่มือพนักงาน (เงื่อนไขและข้อกำหนดการจ้างงาน)</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับคู่มือพนักงาน เงื่อนไขและข้อกำหนดการจ้างงานที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "บันทึกการฝึกอบรม" -->
-        <section id="training-records" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">บันทึกการฝึกอบรม</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับบันทึกการฝึกอบรมที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "ใบอนุญาต ใบรับรอง ต่างๆ" -->
-        <section id="licenses-certificates" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ใบอนุญาต ใบรับรอง ต่างๆ</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับใบอนุญาตและใบรับรองต่างๆ ที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "แผน และการฝึกซ้อม เพื่อตอบสนองสถานการณ์ ฉุกเฉิน" -->
-        <section id="emergency-plan" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">แผน และการฝึกซ้อม เพื่อตอบสนองสถานการณ์ ฉุกเฉิน</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับแผนและการฝึกซ้อมเพื่อตอบสนองสถานการณ์ฉุกเฉินที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "ตัวอย่างการคํานวณ การจ่ายค่าจ้างค่าแรง" -->
-        <section id="wage-calculation-example" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ตัวอย่างการคํานวณ การจ่ายค่าจ้างค่าแรง</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับตัวอย่างการคำนวณการจ่ายค่าจ้างค่าแรงที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "ตัวอย่าง วิธีการหักภาษี ประกันสังคม และอืนๆ" -->
-        <section id="tax-social-security-example" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ตัวอย่าง วิธีการหักภาษี ประกันสังคม และอื่นๆ</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับตัวอย่างวิธีการหักภาษี ประกันสังคม และอื่นๆ ที่นี่</p>
-            </div>
-        </section>
-
-        <!-- Section for "อาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม" -->
-        <section id="ohse" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">อาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับอาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อมที่นี่</p>
-            </div>
-        </section>
-
-        <!-- New Section: ความสอดคล้องต่อข้อกําหนด BP CoC -->
-        <section id="bp-coc-compliance" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ความสอดคล้องต่อข้อกําหนด BP CoC</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับความสอดคล้องต่อข้อกําหนด BP CoC ที่นี่</p>
-            </div>
-        </section>
-
-        <!-- New Section: การปฏิบัติตามกฎหมาย (Image Carousel) -->
-        <section id="legal-compliance" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การปฏิบัติตามกฎหมาย</h2>
-            
-            <!-- Floor Plan Carousel -->
-            <div class="px-4 sm:px-6 lg:px-8 py-4">
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">แผนผังอาคาร</h3>
-            </div>
-            <div id="floorPlanCarousel" class="carousel-container">
-                <!-- Slides from PDF pages -->
-                <div class="carousel-slide active">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page1.jpg" alt="Floor Plan Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 1</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page2.jpg" alt="Floor Plan Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 2</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page3.jpg" alt="Floor Plan Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 3</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page4.jpg" alt="Floor Plan Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 4</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page5.jpg" alt="Floor Plan Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 5</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page6.jpg" alt="Floor Plan Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 6</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page7.jpg" alt="Floor Plan Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 7</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page8.jpg" alt="Floor Plan Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 8</p>
-                </div>
-
-                <!-- Navigation buttons -->
-                <button class="carousel-nav-button prev">&#10094;</button>
-                <button class="carousel-nav-button next">&#10095;</button>
-
-                <!-- Dots for navigation -->
-                <div class="carousel-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+            <!-- Sub-section: People requirement ข้อกำหนด ด้านแรงงาน -->
+            <div id="people-requirement" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">People requirement ข้อกำหนด ด้านแรงงาน</h3>
+                <div class="text-center text-gray-700 text-base sm:text-lg">
+                    <p>กรุณาใส่เนื้อหาเกี่ยวกับข้อกำหนดด้านแรงงานที่นี่</p>
                 </div>
             </div>
 
-            <!-- Tenant Handbook Carousel -->
-            <div class="px-4 sm:px-6 lg:px-8 py-4 mt-8">
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">คู่มือผู้เช่าอาคาร สำนักงาน</h3>
+            <!-- Sub-section: Child Labor / Forced Labor Discrimination แรงงานเด็ก แรงงานบังคับ การเลือกปฎิบัติ -->
+            <div id="child-forced-labor-discrimination" class="py-6 sm:py-8">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Child Labor / Forced Labor Discrimination แรงงานเด็ก แรงงานบังคับ การเลือกปฎิบัติ</h3>
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <h4 class="text-xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารแรงงานเด็ก แรงงานบังคับ</h4>
+                </div>
+                <div id="childForcedLaborCarousel" class="carousel-container">
+                    <!-- Slides for Child/Forced Labor -->
+                    <div class="carousel-slide active">
+                        <img src="https://img2.pic.in.th/pic/3.-_Page1.jpg" alt="Child Forced Labor Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แรงงานเด็ก แรงงานบังคับ - หน้า 1</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/3.-_Page2.jpg" alt="Child Forced Labor Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แรงงานเด็ก แรงงานบังคับ - หน้า 2</p>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <button class="carousel-nav-button prev">&#10094;</button>
+                    <button class="carousel-nav-button next">&#10095;</button>
+
+                    <!-- Dots for navigation -->
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
             </div>
-            <div id="tenantHandbookCarousel" class="carousel-container">
-                <!-- Slides for Tenant Handbook -->
-                <div class="carousel-slide active">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/-_Page1f003f06670a40ef8.jpg" alt="Tenant Handbook Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 1</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/-_Page2f0ef8be00057421f.jpg" alt="Tenant Handbook Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 2</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/-_Page3543d68b8e65932ea.jpg" alt="Tenant Handbook Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 3</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/-_Page4481f30f12b785195.jpg" alt="Tenant Handbook Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 4</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/-_Page56a8b2bc862f874ed.jpg" alt="Tenant Handbook Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 5</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/-_Page6e49d2e89d0e4cabc.jpg" alt="Tenant Handbook Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 6</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/-_Page7cb3267b4757707e7.jpg" alt="Tenant Handbook Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 7</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/-_Page8.jpg" alt="Tenant Handbook Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 8</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/-_Page9.jpg" alt="Tenant Handbook Page 9" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 9</p>
-                </div>
 
-                <!-- Navigation buttons -->
-                <button class="carousel-nav-button prev">&#10094;</button>
-                <button class="carousel-nav-button next">&#10095;</button>
+            <!-- Sub-section: Compensation / Working Hour การจ่ายค่าจ้าง ชั่วโมงการทำงาน -->
+            <div id="compensation-working-hour" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Compensation / Working Hour การจ่ายค่าจ้าง ชั่วโมงการทำงาน</h3>
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <h4 class="text-xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารการจ่ายค่าจ้างและชั่วโมงการทำงาน</h4>
+                </div>
+                <div id="wageWorkingHoursCarousel" class="carousel-container">
+                    <!-- Slides for Wage and Working Hours -->
+                    <div class="carousel-slide active">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/4.-_Page1.jpg" alt="Wage and Working Hours Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">การจ่ายค่าจ้าง ชั่วโมงการทำงาน - หน้า 1</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/4.-_Page2.jpg" alt="Wage and Working Hours Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">การจ่ายค่าจ้าง ชั่วโมงการทำงาน - หน้า 2</p>
+                    </div>
 
-                <!-- Dots for navigation -->
-                <div class="carousel-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <!-- Navigation buttons -->
+                    <button class="carousel-nav-button prev">&#10094;</button>
+                    <button class="carousel-nav-button next">&#10095;</button>
+
+                    <!-- Dots for navigation -->
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-section: Freedom of Association and Collective ข้อกำหนด ด้านคณะกรรมการสวัสดิการฯ / สหภาพแรงงาน -->
+            <div id="freedom-of-association" class="py-6 sm:py-8">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Freedom of Association and Collective ข้อกำหนด ด้านคณะกรรมการสวัสดิการฯ / สหภาพแรงงาน</h3>
+                <div class="text-center text-gray-700 text-base sm:text-lg">
+                    <p>กรุณาใส่เนื้อหาเกี่ยวกับคณะกรรมการสวัสดิการฯ และสหภาพแรงงานที่นี่</p>
+                </div>
+            </div>
+
+            <!-- Sub-section: Disciplinary Management ข้อกำหนด เกี่ยวกับการลงโทษอย่างเป็นธรรม -->
+            <div id="disciplinary-management" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Disciplinary Management ข้อกำหนด เกี่ยวกับการลงโทษอย่างเป็นธรรม</h3>
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <h4 class="text-xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารข้อกำหนดเกี่ยวกับการลงโทษอย่างเป็นธรรม</h4>
+                </div>
+                <div id="fairPunishmentCarousel" class="carousel-container">
+                    <!-- Slides for Fair Punishment -->
+                    <div class="carousel-slide active">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/5.-_Page1.jpg" alt="Fair Punishment Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดเกี่ยวกับการลงโทษอย่างเป็นธรรม - หน้า 1</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/5.-_Page2.jpg" alt="Fair Punishment Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดเกี่ยวกับการลงโทษอย่างเป็นธรรม - หน้า 2</p>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <button class="carousel-nav-button prev">&#10094;</button>
+                    <button class="carousel-nav-button next">&#10095;</button>
+
+                    <!-- Dots for navigation -->
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Remaining sections -->
-        <section id="business-ethics" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">จรรยาบรรณทางธุรกิจ</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับจรรยาบรรณทางธุรกิจที่นี่</p>
-            </div>
-        </section>
+        <!-- Main Section: Health, Safety and Environment อาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม -->
+        <section id="health-safety-environment-section" class="py-12 sm:py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12 main-section-heading">Health, Safety and Environment อาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม</h2>
 
-        <section id="prohibited-practices" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">หลักปฏิบัติที่ต้องห้ามทางธุรกิจ และการกํากับดูแลกิจการที่ดี</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับหลักปฏิบัติที่ต้องห้ามทางธุรกิจ และการกำกับดูแลกิจการที่ดีที่นี่</p>
-            </div>
-        </section>
-
-        <section id="personal-data" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อมูลส่วนบุคคล</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับข้อมูลส่วนบุคคลที่นี่</p>
-            </div>
-        </section>
-
-        <section id="data-security" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การรักษาความปลอดภัยของข้อมูล</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับการรักษาความปลอดภัยของข้อมูลที่นี่</p>
-            </div>
-        </section>
-
-        <section id="trade-compliance" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การปฏิบัติตามข้อกําหนดทางการค้า</h2>
-            <div class="px-4 sm:px-6 lg:px-8 py-4">
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารข้อกำหนดทางการค้า</h3>
-            </div>
-            <div id="tradeComplianceCarousel" class="carousel-container">
-                <!-- Slides for Trade Compliance -->
-                <div class="carousel-slide active">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Neramit_Trade-Compliance-_Page1.jpg" alt="Trade Compliance Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 1</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/Neramit_Trade-Compliance-_Page2.jpg" alt="Trade Compliance Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 2</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/Neramit_Trade-Compliance-_Page3.jpg" alt="Trade Compliance Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 3</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Neramit_Trade-Compliance-_Page4.jpg" alt="Trade Compliance Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 4</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Neramit_Trade-Compliance-_Page5.jpg" alt="Trade Compliance Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 5</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/Neramit_Trade-Compliance-_Page6.jpg" alt="Trade Compliance Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 6</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Neramit_Trade-Compliance-_Page7.jpg" alt="Trade Compliance Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 7</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://img2.pic.in.th/pic/Neramit_Trade-Compliance-_Page8.jpg" alt="Trade Compliance Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 8</p>
-                </div>
-
-                <!-- Navigation buttons -->
-                <button class="carousel-nav-button prev">&#10094;</button>
-                <button class="carousel-nav-button next">&#10095;</button>
-
-                <!-- Dots for navigation -->
-                <div class="carousel-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+            <!-- Sub-section: BP CoC requirements Compliance ความสอดคล้องต่อข้อกำหนด BP CoC -->
+            <div id="bp-coc-compliance" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">BP CoC requirements Compliance ความสอดคล้องต่อข้อกำหนด BP CoC</h3>
+                <div class="text-center text-gray-700 text-base sm:text-lg">
+                    <p>กรุณาใส่เนื้อหาเกี่ยวกับความสอดคล้องต่อข้อกําหนด BP CoC ที่นี่</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Remaining sections -->
-        <section id="business-ethics" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">จรรยาบรรณทางธุรกิจ</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับจรรยาบรรณทางธุรกิจที่นี่</p>
+            <!-- Sub-section: Laws and Regulations Compliance การปฎิบัติตามกฎหมาย -->
+            <div id="laws-regulations-compliance" class="py-6 sm:py-8">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Laws and Regulations Compliance การปฎิบัติตามกฎหมาย</h3>
+                
+                <!-- Floor Plan Carousel -->
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <h4 class="text-xl font-semibold text-[#0077B6] mb-4 text-center">แผนผังอาคาร</h4>
+                </div>
+                <div id="floorPlanCarousel" class="carousel-container">
+                    <!-- Slides from PDF pages -->
+                    <div class="carousel-slide active">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page1.jpg" alt="Floor Plan Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 1</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page2.jpg" alt="Floor Plan Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 2</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page3.jpg" alt="Floor Plan Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 3</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page4.jpg" alt="Floor Plan Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 4</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page5.jpg" alt="Floor Plan Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 5</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page6.jpg" alt="Floor Plan Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 6</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page7.jpg" alt="Floor Plan Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 7</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page8.jpg" alt="Floor Plan Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 8</p>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <button class="carousel-nav-button prev">&#10094;</button>
+                    <button class="carousel-nav-button next">&#10095;</button>
+
+                    <!-- Dots for navigation -->
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <!-- Tenant Handbook Carousel -->
+                <div class="px-4 sm:px-6 lg:px-8 py-4 mt-8">
+                    <h4 class="text-xl font-semibold text-[#0077B6] mb-4 text-center">คู่มือผู้เช่าอาคาร สำนักงาน</h4>
+                </div>
+                <div id="tenantHandbookCarousel" class="carousel-container">
+                    <!-- Slides for Tenant Handbook -->
+                    <div class="carousel-slide active">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/-_Page1f003f06670a40ef8.jpg" alt="Tenant Handbook Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 1</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/-_Page2f0ef8be00057421f.jpg" alt="Tenant Handbook Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 2</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/-_Page3543d68b8e65932ea.jpg" alt="Tenant Handbook Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 3</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/-_Page4481f30f12b785195.jpg" alt="Tenant Handbook Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 4</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/-_Page56a8b2bc862f874ed.jpg" alt="Tenant Handbook Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 5</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/-_Page6e49d2e89d0e4cabc.jpg" alt="Tenant Handbook Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 6</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/-_Page7cb3267b4757707e7.jpg" alt="Tenant Handbook Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 7</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/-_Page8.jpg" alt="Tenant Handbook Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 8</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/-_Page9.jpg" alt="Tenant Handbook Page 9" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 9</p>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <button class="carousel-nav-button prev">&#10094;</button>
+                    <button class="carousel-nav-button next">&#10095;</button>
+
+                    <!-- Dots for navigation -->
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="prohibited-practices" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">หลักปฏิบัติที่ต้องห้ามทางธุรกิจ และการกํากับดูแลกิจการที่ดี</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับหลักปฏิบัติที่ต้องห้ามทางธุรกิจ และการกำกับดูแลกิจการที่ดีที่นี่</p>
-            </div>
-        </section>
+        <!-- Main Section: Ethical Business Practice จรรยาบรรณทางธุรกิจ -->
+        <section id="ethical-business-practice-section" class="py-12 sm:py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12 main-section-heading">Ethical Business Practice จรรยาบรรณทางธุรกิจ</h2>
 
-        <section id="personal-data" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อมูลส่วนบุคคล</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับข้อมูลส่วนบุคคลที่นี่</p>
+            <!-- Sub-section: Prohibited Business Practices หลักปฎิบัติที่ต้องห้ามทางธุรกิจ และการกำกับดูแลกิจการที่ดี -->
+            <div id="prohibited-business-practices" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Prohibited Business Practices หลักปฎิบัติที่ต้องห้ามทางธุรกิจ และการกำกับดูแลกิจการที่ดี</h3>
+                <div class="text-center text-gray-700 text-base sm:text-lg">
+                    <p>กรุณาใส่เนื้อหาเกี่ยวกับหลักปฏิบัติที่ต้องห้ามทางธุรกิจ และการกำกับดูแลกิจการที่ดีที่นี่</p>
+                </div>
             </div>
-        </section>
 
-        <section id="data-security" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การรักษาความปลอดภัยของข้อมูล</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับการรักษาความปลอดภัยของข้อมูลที่นี่</p>
+            <!-- Sub-section: Data Privacy ข้อมูลส่วนบุคคล -->
+            <div id="data-privacy" class="py-6 sm:py-8">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Data Privacy ข้อมูลส่วนบุคคล</h3>
+                <div class="text-center text-gray-700 text-base sm:text-lg">
+                    <p>กรุณาใส่เนื้อหาเกี่ยวกับข้อมูลส่วนบุคคลที่นี่</p>
+                </div>
             </div>
-        </section>
 
-        <section id="risk-management" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การบริหารความเสี่ยง</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับการบริหารความเสี่ยงที่นี่</p>
+            <!-- Sub-section: Information Security การรักษาความปลอดภัยของข้อมูลฯ -->
+            <div id="information-security" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Information Security การรักษาความปลอดภัยของข้อมูลฯ</h3>
+                <div class="text-center text-gray-700 text-base sm:text-lg">
+                    <p>กรุณาใส่เนื้อหาเกี่ยวกับการรักษาความปลอดภัยของข้อมูลที่นี่</p>
+                </div>
             </div>
-        </section>
 
-        <section id="management-system" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ระบบบการจัดการฯ</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับระบบบการจัดการฯ ที่นี่</p>
+            <!-- Sub-section: Trade Compliance การปฎิบัติตามข้อกำหนดทางการค้า -->
+            <div id="trade-compliance" class="py-6 sm:py-8">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Trade Compliance การปฎิบัติตามข้อกำหนดทางการค้า</h3>
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <h4 class="text-xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารข้อกำหนดทางการค้า</h4>
+                </div>
+                <div id="tradeComplianceCarousel" class="carousel-container">
+                    <!-- Slides for Trade Compliance -->
+                    <div class="carousel-slide active">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Neramit_Trade-Compliance-_Page1.jpg" alt="Trade Compliance Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 1</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Neramit_Trade-Compliance-_Page2.jpg" alt="Trade Compliance Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 2</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Neramit_Trade-Compliance-_Page3.jpg" alt="Trade Compliance Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 3</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Neramit_Trade-Compliance-_Page4.jpg" alt="Trade Compliance Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 4</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Neramit_Trade-Compliance-_Page5.jpg" alt="Trade Compliance Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 5</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Neramit_Trade-Compliance-_Page6.jpg" alt="Trade Compliance Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 6</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Neramit_Trade-Compliance-_Page7.jpg" alt="Trade Compliance Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 7</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Neramit_Trade-Compliance-_Page8.jpg" alt="Trade Compliance Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ข้อกำหนดทางการค้า - หน้า 8</p>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <button class="carousel-nav-button prev">&#10094;</button>
+                    <button class="carousel-nav-button next">&#10095;</button>
+
+                    <!-- Dots for navigation -->
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section id="policies-announcements" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ประกาศ นโยบายด้านต่างๆ</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับประกาศ นโยบายด้านต่างๆ ที่นี่</p>
+            <!-- Sub-section: Risk Management การบริหารความเสี่ยง -->
+            <div id="risk-management" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Risk Management การบริหารความเสี่ยง</h3>
+                <div class="text-center text-gray-700 text-base sm:text-lg">
+                    <p>กรุณาใส่เนื้อหาเกี่ยวกับการบริหารความเสี่ยงที่นี่</p>
+                </div>
             </div>
-        </section>
 
-        <section id="child-labor-employment" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การจ้างแรงงานเด็ก</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับการจ้างแรงงานเด็กที่นี่</p>
-            </div>
-        </section>
-
-        <section id="employee-welfare" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">สวัสดิการพนักงาน</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับสวัสดิการพนักงานที่นี่</p>
-            </div>
-        </section>
-
-        <section id="occupational-health-safety" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">อาชีวอนามัย ความปลอดภัย</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับอาชีวอนามัย ความปลอดภัยที่นี่</p>
-            </div>
-        </section>
-
-        <section id="labor-relations" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">แรงงานสัมพันธ์</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับแรงงานสัมพันธ์ที่นี่</p>
-            </div>
-        </section>
-
-        <section id="environment" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">สภาพแวดล้อม</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับสภาพแวดล้อมที่นี่</p>
-            </div>
-        </section>
-
-        <section id="training" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การฝึกอบรม</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับการฝึกอบรมที่นี่</p>
-            </div>
-        </section>
-
-        <section id="discrimination-harassment" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การเลือกปฏิบัติและการล่วงละเมิดในที่ทำงาน</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับการเลือกปฏิบัติและการล่วงละเมิดในที่ทำงานที่นี่</p>
-            </div>
-        </section>
-
-        <section id="subcontractors" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ผู้รับเหมาช่วง</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับผู้รับเหมาช่วงที่นี่</p>
+            <!-- Sub-section: Management System ระบบการจัดการฯ -->
+            <div id="management-system" class="py-6 sm:py-8">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Management System ระบบการจัดการฯ</h3>
+                <div class="text-center text-gray-700 text-base sm:text-lg">
+                    <p>กรุณาใส่เนื้อหาเกี่ยวกับระบบบการจัดการฯ ที่นี่</p>
+                </div>
             </div>
         </section>
 
@@ -963,7 +805,8 @@
             carouselsData.tenantHandbookCarousel = new Carousel('tenantHandbookCarousel');
             carouselsData.tradeComplianceCarousel = new Carousel('tradeComplianceCarousel');
             carouselsData.childForcedLaborCarousel = new Carousel('childForcedLaborCarousel');
-            carouselsData.wageWorkingHoursCarousel = new Carousel('wageWorkingHoursCarousel'); // Initialize the new carousel
+            carouselsData.wageWorkingHoursCarousel = new Carousel('wageWorkingHoursCarousel');
+            carouselsData.fairPunishmentCarousel = new Carousel('fairPunishmentCarousel');
             console.log("All carousels initialized successfully.");
         });
 
