@@ -293,16 +293,58 @@
         <!-- Section for "แรงงานเด็ก แรงงานบังคับ การเลือกปฏิบัติ" -->
         <section id="child-forced-labor" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">แรงงานเด็ก แรงงานบังคับ การเลือกปฏิบัติ</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับแรงงานเด็ก แรงงานบังคับ และการเลือกปฏิบัติที่นี่</p>
+            <div class="px-4 sm:px-6 lg:px-8 py-4">
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารแรงงานเด็ก แรงงานบังคับ</h3>
+            </div>
+            <div id="childForcedLaborCarousel" class="carousel-container">
+                <!-- Slides for Child/Forced Labor -->
+                <div class="carousel-slide active">
+                    <img src="https://img2.pic.in.th/pic/3.-_Page1.jpg" alt="Child Forced Labor Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แรงงานเด็ก แรงงานบังคับ - หน้า 1</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/3.-_Page2.jpg" alt="Child Forced Labor Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แรงงานเด็ก แรงงานบังคับ - หน้า 2</p>
+                </div>
+
+                <!-- Navigation buttons -->
+                <button class="carousel-nav-button prev">&#10094;</button>
+                <button class="carousel-nav-button next">&#10095;</button>
+
+                <!-- Dots for navigation -->
+                <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
         </section>
 
         <!-- Section for "การจ่ายค่าจ้าง ชัวโมงการทํางาน" -->
         <section id="wage-working-hours" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การจ่ายค่าจ้าง ชั่วโมงการทำงาน</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับการจ่ายค่าจ้างและชั่วโมงการทำงานที่นี่</p>
+            <div class="px-4 sm:px-6 lg:px-8 py-4">
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารการจ่ายค่าจ้างและชั่วโมงการทำงาน</h3>
+            </div>
+            <div id="wageWorkingHoursCarousel" class="carousel-container">
+                <!-- Slides for Wage and Working Hours -->
+                <div class="carousel-slide active">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/4.-_Page1.jpg" alt="Wage and Working Hours Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">การจ่ายค่าจ้าง ชั่วโมงการทำงาน - หน้า 1</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://img2.pic.in.th/pic/4.-_Page2.jpg" alt="Wage and Working Hours Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">การจ่ายค่าจ้าง ชั่วโมงการทำงาน - หน้า 2</p>
+                </div>
+
+                <!-- Navigation buttons -->
+                <button class="carousel-nav-button prev">&#10094;</button>
+                <button class="carousel-nav-button next">&#10095;</button>
+
+                <!-- Dots for navigation -->
+                <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
         </section>
 
@@ -920,6 +962,8 @@
             carouselsData.floorPlanCarousel = new Carousel('floorPlanCarousel');
             carouselsData.tenantHandbookCarousel = new Carousel('tenantHandbookCarousel');
             carouselsData.tradeComplianceCarousel = new Carousel('tradeComplianceCarousel');
+            carouselsData.childForcedLaborCarousel = new Carousel('childForcedLaborCarousel');
+            carouselsData.wageWorkingHoursCarousel = new Carousel('wageWorkingHoursCarousel'); // Initialize the new carousel
             console.log("All carousels initialized successfully.");
         });
 
