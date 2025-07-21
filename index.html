@@ -312,6 +312,50 @@
                     </div>
                 </div>
             </div>
+
+            <!-- New Sub-section: Product and service for True -->
+            <div id="product-service-true" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">Product and service for True</h3>
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <h4 class="text-xl font-semibold text-[#0077B6] mb-4 text-center">เอกสาร Product and service for True</h4>
+                </div>
+                <div id="productServiceTrueCarousel" class="carousel-container">
+                    <!-- Slides for Product and service for True -->
+                    <div class="carousel-slide active">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Product-and-service-for-True_Page1.jpg" alt="Product and service for True Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">Product and service for True - หน้า 1</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Product-and-service-for-True_Page2.jpg" alt="Product and service for True Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">Product and service for True - หน้า 2</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Product-and-service-for-True_Page3.jpg" alt="Product and service for True Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">Product and service for True - หน้า 3</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/Product-and-service-for-True_Page4.jpg" alt="Product and service for True Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">Product and service for True - หน้า 4</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Product-and-service-for-True_Page5.jpg" alt="Product and service for True Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">Product and service for True - หน้า 5</p>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <button class="carousel-nav-button prev">&#10094;</button>
+                    <button class="carousel-nav-button next">&#10095;</button>
+
+                    <!-- Dots for navigation -->
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Main Section: Labor แรงงาน -->
@@ -1552,7 +1596,8 @@
 
         // Initialize carousels on page load
         document.addEventListener('DOMContentLoaded', () => {
-            carouselsData.topManagementInterviewCarousel = new Carousel('topManagementInterviewCarousel'); // New carousel initialization
+            carouselsData.topManagementInterviewCarousel = new Carousel('topManagementInterviewCarousel');
+            carouselsData.productServiceTrueCarousel = new Carousel('productServiceTrueCarousel'); // New carousel initialization
             carouselsData.peopleRequirementCarousel = new Carousel('peopleRequirementCarousel');
             carouselsData.childForcedLaborCarousel = new Carousel('childForcedLaborCarousel');
             carouselsData.wageWorkingHoursCarousel = new Carousel('wageWorkingHoursCarousel');
@@ -1560,9 +1605,9 @@
             carouselsData.fairPunishmentCarousel = new Carousel('fairPunishmentCarousel');
             carouselsData.bpCocComplianceCarousel = new Carousel('bpCocComplianceCarousel');
             // Reordered carousels for "Laws and Regulations Compliance"
-            carouselsData.emergencyEvacuationCarousel = new Carousel('emergencyEvacuationCarousel'); // Now first
-            carouselsData.floorPlanCarousel = new Carousel('floorPlanCarousel'); // Now second
-            carouselsData.tenantHandbookCarousel = new Carousel('tenantHandbookCarousel'); // Now third
+            carouselsData.emergencyEvacuationCarousel = new Carousel('emergencyEvacuationCarousel');
+            carouselsData.floorPlanCarousel = new Carousel('floorPlanCarousel');
+            carouselsData.tenantHandbookCarousel = new Carousel('tenantHandbookCarousel');
             carouselsData.tradeComplianceCarousel = new Carousel('tradeComplianceCarousel');
             carouselsData.riskManagementCarousel = new Carousel('riskManagementCarousel');
             carouselsData.managementSystemCarousel = new Carousel('managementSystemCarousel');
