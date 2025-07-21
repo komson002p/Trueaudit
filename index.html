@@ -64,9 +64,8 @@
         /* Adjust spacing for smaller screens to prevent overflow */
         @media (max-width: 640px) {
             .sticky-nav .container {
+                /* On small screens, we still want horizontal scroll if links don't fit on one line initially */
                 justify-content: flex-start; /* Align items to start for better scrolling */
-                overflow-x: auto; /* Enable horizontal scrolling */
-                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
                 padding-bottom: 0.5rem; /* Add padding for scrollbar */
             }
             .sticky-nav .container::-webkit-scrollbar {
@@ -120,7 +119,9 @@
     -->
 
     <nav class="sticky-nav shadow-md">
-        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 md:gap-x-6 lg:gap-x-8">
+        <!-- Container for navigation links - now with collapsible behavior -->
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 md:gap-x-6 lg:gap-x-8
+                    max-h-14 overflow-y-hidden transition-all duration-500 ease-in-out hover:max-h-96 hover:overflow-y-auto">
             <a href="#intro" class="nav-link">บทนำ</a>
             <a href="#contract-example" class="nav-link">ตัวอย่างสัญญาจ้างแรงงาน</a>
             <a href="#labor-requirements" class="nav-link">ข้อกำหนดด้านแรงงาน</a>
@@ -356,22 +357,6 @@
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับการจ้างแรงงานเด็กที่นี่</p>
             </div>
         </section>
-
-        <!-- Re-using existing section for "ค่าจ้างและชั่วโมงการทำงาน" -->
-        <!-- <section id="wage-working-hours" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ค่าจ้างและชั่วโมงการทำงาน</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับค่าจ้างและชั่วโมงการทำงานที่นี่</p>
-            </div>
-        </section> -->
-
-        <!-- Re-using existing section for "วินัยและการลงโทษ" -->
-        <!-- <section id="fair-punishment" class="py-12 sm:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">วินัยและการลงโทษ</h2>
-            <div class="text-center text-gray-700 text-base sm:text-lg">
-                <p>กรุณาใส่เนื้อหาเกี่ยวกับวินัยและการลงโทษที่นี่</p>
-            </div>
-        </section> -->
 
         <section id="employee-welfare" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">สวัสดิการพนักงาน</h2>
