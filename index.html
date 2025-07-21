@@ -106,6 +106,7 @@
             height: auto;
             display: block;
             border-radius: 0.75rem; /* rounded-xl */
+            cursor: pointer; /* Add pointer cursor to indicate clickability */
         }
         .carousel-slide.active {
             display: block; /* Show active slide */
@@ -149,6 +150,21 @@
         }
         .dot.active {
             background-color: #0077B6; /* Main Blue for active dot */
+        }
+
+        /* Modal styles */
+        #imageModal {
+            /* Tailwind classes handle most of this: fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 hidden */
+        }
+        #imageModal .relative {
+            /* This div holds the image and close button */
+            /* max-w-5xl max-h-full overflow-auto */
+        }
+        #imageModal img {
+            /* max-w-full max-h-full rounded-lg shadow-lg */
+        }
+        #imageModal button {
+            /* absolute top-2 right-2 text-white text-4xl font-bold p-2 leading-none hover:text-gray-300 transition-colors duration-200 */
         }
     </style>
 </head>
@@ -357,51 +373,35 @@
             <div id="floorPlanCarousel" class="carousel-container">
                 <!-- Slides from PDF pages -->
                 <div class="carousel-slide active">
-                    <a href="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page1.jpg" target="_blank">
-                        <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page1.jpg" alt="Floor Plan Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page1.jpg" alt="Floor Plan Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 1</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page2.jpg" target="_blank">
-                        <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page2.jpg" alt="Floor Plan Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page2.jpg" alt="Floor Plan Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 2</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page3.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page3.jpg" alt="Floor Plan Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page3.jpg" alt="Floor Plan Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 3</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page4.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page4.jpg" alt="Floor Plan Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page4.jpg" alt="Floor Plan Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 4</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page5.jpg" target="_blank">
-                        <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page5.jpg" alt="Floor Plan Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page5.jpg" alt="Floor Plan Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 5</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page6.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page6.jpg" alt="Floor Plan Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page6.jpg" alt="Floor Plan Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 6</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page7.jpg" target="_blank">
-                        <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page7.jpg" alt="Floor Plan Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img5.pic.in.th/file/secure-sv1/Floor-Plan-A403-A404-_-111-Praditmanutham_Page7.jpg" alt="Floor Plan Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 7</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page8.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page8.jpg" alt="Floor Plan Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/Floor-Plan-A403-A404-_-111-Praditmanutham_Page8.jpg" alt="Floor Plan Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 8</p>
                 </div>
 
@@ -429,57 +429,39 @@
             <div id="tenantHandbookCarousel" class="carousel-container">
                 <!-- Slides for Tenant Handbook -->
                 <div class="carousel-slide active">
-                    <a href="https://img5.pic.in.th/file/secure-sv1/-_Page1f003f06670a40ef8.jpg" target="_blank">
-                        <img src="https://img5.pic.in.th/file/secure-sv1/-_Page1f003f06670a40ef8.jpg" alt="Tenant Handbook Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-_Page1f003f06670a40ef8.jpg" alt="Tenant Handbook Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 1</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/-_Page2f0ef8be00057421f.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/-_Page2f0ef8be00057421f.jpg" alt="Tenant Handbook Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/-_Page2f0ef8be00057421f.jpg" alt="Tenant Handbook Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 2</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img5.pic.in.th/file/secure-sv1/-_Page3543d68b8e65932ea.jpg" target="_blank">
-                        <img src="https://img5.pic.in.th/file/secure-sv1/-_Page3543d68b8e65932ea.jpg" alt="Tenant Handbook Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-_Page3543d68b8e65932ea.jpg" alt="Tenant Handbook Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 3</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/-_Page4481f30f12b785195.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/-_Page4481f30f12b785195.jpg" alt="Tenant Handbook Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/-_Page4481f30f12b785195.jpg" alt="Tenant Handbook Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 4</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/-_Page56a8b2bc862f874ed.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/-_Page56a8b2bc862f874ed.jpg" alt="Tenant Handbook Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/-_Page56a8b2bc862f874ed.jpg" alt="Tenant Handbook Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 5</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img5.pic.in.th/file/secure-sv1/-_Page6e49d2e89d0e4cabc.jpg" target="_blank">
-                        <img src="https://img5.pic.in.th/file/secure-sv1/-_Page6e49d2e89d0e4cabc.jpg" alt="Tenant Handbook Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-_Page6e49d2e89d0e4cabc.jpg" alt="Tenant Handbook Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 6</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/-_Page7cb3267b4757707e7.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/-_Page7cb3267b4757707e7.jpg" alt="Tenant Handbook Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/-_Page7cb3267b4757707e7.jpg" alt="Tenant Handbook Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 7</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img5.pic.in.th/file/secure-sv1/-_Page8.jpg" target="_blank">
-                        <img src="https://img5.pic.in.th/file/secure-sv1/-_Page8.jpg" alt="Tenant Handbook Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-_Page8.jpg" alt="Tenant Handbook Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 8</p>
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://img2.pic.in.th/pic/-_Page9.jpg" target="_blank">
-                        <img src="https://img2.pic.in.th/pic/-_Page9.jpg" alt="Tenant Handbook Page 9" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
-                    </a>
+                    <img src="https://img2.pic.in.th/pic/-_Page9.jpg" alt="Tenant Handbook Page 9" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';" onclick="openModal(this.src)">
                     <p class="text-sm text-gray-600 mt-2">คู่มือผู้เช่า - หน้า 9</p>
                 </div>
 
@@ -631,6 +613,16 @@
         <p class="text-sm">&copy; 2568 บริษัท เนรมิตรหนัง ฟิล์ม จำกัด สำหรับ Suppliers Audit Preparation and Practice. สงวนลิขสิทธิ์.</p>
     </footer>
 
+    <!-- Image Modal Structure -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 hidden">
+        <div class="relative p-4 max-w-5xl max-h-full overflow-auto">
+            <button class="absolute top-2 right-2 text-white text-4xl font-bold p-2 leading-none hover:text-gray-300 transition-colors duration-200" onclick="closeModal()">
+                &times;
+            </button>
+            <img id="modalImage" src="" alt="Full size image" class="max-w-full max-h-full rounded-lg shadow-lg">
+        </div>
+    </div>
+
     <script>
         // Function to wrap labels for Chart.js (kept for future use if charts are added)
         function wrapLabels(label, maxWidth) {
@@ -723,6 +715,35 @@
                 this.showSlides(this.slideIndex = n);
             }
         }
+
+        // Modal functions
+        /**
+         * Opens the full-screen image modal.
+         * @param {string} imageSrc - The source URL of the image to display.
+         */
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        /**
+         * Closes the full-screen image modal.
+         */
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close modal on Escape key press
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
 
         // Initialize carousels on page load
         document.addEventListener('DOMContentLoaded', () => {
