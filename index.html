@@ -40,7 +40,6 @@
             z-index: 50;
             background-color: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
-            /* Enhanced styling for the sticky navigation bar */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
             border-bottom: 1px solid #e2e8f0; /* Light border at the bottom */
         }
@@ -64,7 +63,6 @@
         /* Adjust spacing for smaller screens to prevent overflow */
         @media (max-width: 640px) {
             .sticky-nav .container {
-                /* On small screens, we still want horizontal scroll if links don't fit on one line initially */
                 justify-content: flex-start; /* Align items to start for better scrolling */
                 padding-bottom: 0.5rem; /* Add padding for scrollbar */
             }
@@ -86,6 +84,71 @@
                 margin-right: 0.5rem; /* Add some margin between links */
                 flex-shrink: 0; /* Prevent links from shrinking */
             }
+        }
+
+        /* Carousel specific styles */
+        .carousel-container {
+            position: relative;
+            max-width: 800px; /* Max width for the carousel */
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            background-color: #fff;
+        }
+        .carousel-slide {
+            display: none; /* Hidden by default */
+            width: 100%;
+            text-align: center;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+        .carousel-slide.active {
+            display: block; /* Show active slide */
+        }
+        .carousel-nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 119, 182, 0.7); /* Main Blue with transparency */
+            color: white;
+            border: none;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            border-radius: 9999px; /* Fully rounded */
+            transition: background-color 0.3s ease;
+            z-index: 10;
+        }
+        .carousel-nav-button:hover {
+            background-color: #0077B6; /* Solid Main Blue on hover */
+        }
+        .carousel-nav-button.prev {
+            left: 1rem;
+        }
+        .carousel-nav-button.next {
+            right: 1rem;
+        }
+        .carousel-dots {
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #0077B6; /* Main Blue for active dot */
         }
     </style>
 </head>
@@ -136,6 +199,8 @@
             <a href="#wage-calculation-example" class="nav-link">ตัวอย่างการคำนวณการจ่ายค่าจ้าง</a>
             <a href="#tax-social-security-example" class="nav-link">ตัวอย่างวิธีการหักภาษี ประกันสังคม</a>
             <a href="#ohse" class="nav-link">อาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม</a>
+            <a href="#bp-coc-compliance" class="nav-link">ความสอดคล้องต่อข้อกําหนด BP CoC</a>
+            <a href="#legal-compliance" class="nav-link">การปฏิบัติตามกฎหมาย</a>
             <a href="#business-ethics" class="nav-link">จรรยาบรรณทางธุรกิจ</a>
             <a href="#prohibited-practices" class="nav-link">หลักปฏิบัติที่ต้องห้ามทางธุรกิจ</a>
             <a href="#personal-data" class="nav-link">ข้อมูลส่วนบุคคล</a>
@@ -162,7 +227,6 @@
             <p class="text-lg sm:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
                 คำแนะนำและแนวปฏิบัติสำหรับการเตรียมตัวและดำเนินการตรวจสอบซัพพลายเออร์เพื่อให้มั่นใจถึงการปฏิบัติตามมาตรฐานที่เกี่ยวข้อง.
             </p>
-            <!-- เดิมเป็นส่วนของ PDPA Big Number ที่ถูกปรับเป็นข้อความแนะนำ -->
             <div class="bg-white rounded-xl shadow-2xl p-8 sm:p-10 inline-block border-4 border-[#00B4D8]">
                 <p class="text-2xl sm:text-3xl font-semibold text-[#0077B6] mb-2">เป้าหมายสำคัญ:</p>
                 <p class="text-5xl sm:text-7xl font-bold text-[#0077B6]">พร้อม</p>
@@ -174,7 +238,6 @@
         <section id="contract-example" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ตัวอย่างสัญญา จ้างแรงงาน</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับตัวอย่างสัญญาจ้างแรงงานที่นี่</p>
             </div>
         </section>
@@ -183,7 +246,6 @@
         <section id="labor-requirements" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อกําหนด ด้านแรงงาน</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับข้อกำหนดด้านแรงงานที่นี่</p>
             </div>
         </section>
@@ -192,7 +254,6 @@
         <section id="child-forced-labor" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">แรงงานเด็ก แรงงานบังคับ การเลือกปฏิบัติ</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับแรงงานเด็ก แรงงานบังคับ และการเลือกปฏิบัติที่นี่</p>
             </div>
         </section>
@@ -201,7 +262,6 @@
         <section id="wage-working-hours" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การจ่ายค่าจ้าง ชั่วโมงการทำงาน</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับการจ่ายค่าจ้างและชั่วโมงการทำงานที่นี่</p>
             </div>
         </section>
@@ -210,7 +270,6 @@
         <section id="welfare-committee" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อกําหนด ด้านคณะกรรมการสวัสดิการฯ / สหภาพแรงงาน</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับคณะกรรมการสวัสดิการฯ และสหภาพแรงงานที่นี่</p>
             </div>
         </section>
@@ -219,7 +278,6 @@
         <section id="fair-punishment" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อกำหนดเกี่ยวกับการลงโทษอย่างเป็นธรรม</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับข้อกำหนดการลงโทษอย่างเป็นธรรมที่นี่</p>
             </div>
         </section>
@@ -228,18 +286,14 @@
         <section id="employee-handbook" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">คู่มือพนักงาน (เงื่อนไขและข้อกำหนดการจ้างงาน)</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับคู่มือพนักงาน เงื่อนไขและข้อกำหนดการจ้างงานที่นี่</p>
             </div>
         </section>
-
-        <!-- New Sections added below -->
 
         <!-- Section for "บันทึกการฝึกอบรม" -->
         <section id="training-records" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">บันทึกการฝึกอบรม</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับบันทึกการฝึกอบรมที่นี่</p>
             </div>
         </section>
@@ -248,7 +302,6 @@
         <section id="licenses-certificates" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ใบอนุญาต ใบรับรอง ต่างๆ</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับใบอนุญาตและใบรับรองต่างๆ ที่นี่</p>
             </div>
         </section>
@@ -257,7 +310,6 @@
         <section id="emergency-plan" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">แผน และการฝึกซ้อม เพื่อตอบสนองสถานการณ์ ฉุกเฉิน</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับแผนและการฝึกซ้อมเพื่อตอบสนองสถานการณ์ฉุกเฉินที่นี่</p>
             </div>
         </section>
@@ -266,7 +318,6 @@
         <section id="wage-calculation-example" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ตัวอย่างการคํานวณ การจ่ายค่าจ้างค่าแรง</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับตัวอย่างการคำนวณการจ่ายค่าจ้างค่าแรงที่นี่</p>
             </div>
         </section>
@@ -275,7 +326,6 @@
         <section id="tax-social-security-example" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ตัวอย่าง วิธีการหักภาษี ประกันสังคม และอื่นๆ</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับตัวอย่างวิธีการหักภาษี ประกันสังคม และอื่นๆ ที่นี่</p>
             </div>
         </section>
@@ -284,30 +334,88 @@
         <section id="ohse" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">อาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับอาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อมที่นี่</p>
             </div>
         </section>
 
-        <!-- Section for "จรรยาบรรณทางธุรกิจ" -->
+        <!-- New Section: ความสอดคล้องต่อข้อกําหนด BP CoC -->
+        <section id="bp-coc-compliance" class="py-12 sm:py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ความสอดคล้องต่อข้อกําหนด BP CoC</h2>
+            <div class="text-center text-gray-700 text-base sm:text-lg">
+                <p>กรุณาใส่เนื้อหาเกี่ยวกับความสอดคล้องต่อข้อกําหนด BP CoC ที่นี่</p>
+            </div>
+        </section>
+
+        <!-- New Section: การปฏิบัติตามกฎหมาย (Image Carousel) -->
+        <section id="legal-compliance" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">การปฏิบัติตามกฎหมาย</h2>
+            <div class="carousel-container">
+                <!-- Slides from PDF pages -->
+                <div class="carousel-slide active">
+                    <img src="https://drive.google.com/uc?id=1eZJnHXIjCfkoKnVImY0__6Qjvn0jKxfs" alt="Floor Plan Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 1</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://drive.google.com/uc?id=1T3u81Zn0gQcNZsQINq1hbEbMJAMkXURj" alt="Floor Plan Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 2</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://drive.google.com/uc?id=1V4nNYbb4_tdrYIRQtuOaRxPqHpXrr92v" alt="Floor Plan Page 3" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 3</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://drive.google.com/uc?id=1_JfvdPGKTTYOi4iLcteppdyTSUb1UL1L" alt="Floor Plan Page 4" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 4</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://drive.google.com/uc?id=1LmfzJRtPDUmPLnBufVeTcnM4zuUpJ-w4" alt="Floor Plan Page 5" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 5</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://drive.google.com/uc?id=15XXJ93HheLS5muFJRcwgBpByA1Ri57Ht" alt="Floor Plan Page 6" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 6</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://drive.google.com/uc?id=1hFZtpo-vFKr1xCs08MuPt8XLkqpAXF-G" alt="Floor Plan Page 7" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 7</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://drive.google.com/uc?id=1KMCiIJdhmJ9m3dOF-bln-C7CD_0BTMdc" alt="Floor Plan Page 8" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                    <p class="text-sm text-gray-600 mt-2">แผนผังชั้น - หน้า 8</p>
+                </div>
+
+                <!-- Navigation buttons -->
+                <button class="carousel-nav-button prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="carousel-nav-button next" onclick="plusSlides(1)">&#10095;</button>
+
+                <!-- Dots for navigation -->
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Remaining sections -->
         <section id="business-ethics" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">จรรยาบรรณทางธุรกิจ</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับจรรยาบรรณทางธุรกิจที่นี่</p>
             </div>
         </section>
 
-        <!-- Section for "หลักปฏิบัติทีต้องห้ามทางธุรกิจ และการกํากับดูแลกิจการทีดี" -->
         <section id="prohibited-practices" class="py-12 sm:py-16 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">หลักปฏิบัติที่ต้องห้ามทางธุรกิจ และการกํากับดูแลกิจการที่ดี</h2>
             <div class="text-center text-gray-700 text-base sm:text-lg">
-                <!-- เนื้อหาจะถูกใส่ที่นี่ในภายหลัง -->
                 <p>กรุณาใส่เนื้อหาเกี่ยวกับหลักปฏิบัติที่ต้องห้ามทางธุรกิจ และการกำกับดูแลกิจการที่ดีที่นี่</p>
             </div>
         </section>
-
-        <!-- New sections from current request -->
 
         <section id="personal-data" class="py-12 sm:py-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#0077B6] text-center mb-10 sm:mb-12">ข้อมูลส่วนบุคคล</h2>
@@ -424,7 +532,7 @@
     </footer>
 
     <script>
-        // Function to wrap labels for Chart.js
+        // Function to wrap labels for Chart.js (kept for future use if charts are added)
         function wrapLabels(label, maxWidth) {
             if (typeof label !== 'string' || label.length <= maxWidth) {
                 return label;
@@ -457,13 +565,52 @@
             }
         };
 
-        // Charts from previous content (PDPA) are removed as they are not relevant to the new topic.
-        // If you need new charts for "Suppliers Audit", please provide the data and context.
+        // --- Carousel Logic for "การปฏิบัติตามกฎหมาย" ---
+        let slideIndex = 1; // Current slide index
 
-        // Removed Chart 1: Employee Data Types (Donut Chart)
-        // Removed Chart 2: IT Responsibility (Bar Chart)
-        // Removed Chart 3: Technical Measures Radar Chart
-        // Removed Chart 4: Backup Policy Factors (Donut Chart)
+        // Function to display slides
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("carousel-slide");
+            const dots = document.getElementsByClassName("dot");
+
+            // Wrap around if index goes out of bounds
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Deactivate all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // Display the current slide and activate the corresponding dot
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        // Initialize carousel on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlides(slideIndex);
+        });
 
     </script>
 </body>
