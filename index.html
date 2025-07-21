@@ -438,8 +438,29 @@
             <!-- Sub-section: BP CoC requirements Compliance ความสอดคล้องต่อข้อกำหนด BP CoC -->
             <div id="bp-coc-compliance" class="py-6 sm:py-8 bg-[#CAF0F8] rounded-xl shadow-lg my-8 p-6 sm:p-10">
                 <h3 class="text-2xl sm:text-3xl font-bold text-[#0077B6] text-center mb-8">BP CoC requirements Compliance ความสอดคล้องต่อข้อกำหนด BP CoC</h3>
-                <div class="text-center text-gray-700 text-base sm:text-lg">
-                    <p>กรุณาใส่เนื้อหาเกี่ยวกับความสอดคล้องต่อข้อกําหนด BP CoC ที่นี่</p>
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <h4 class="text-xl font-semibold text-[#0077B6] mb-4 text-center">เอกสารความสอดคล้องต่อข้อกำหนด BP CoC</h4>
+                </div>
+                <div id="bpCocComplianceCarousel" class="carousel-container">
+                    <!-- Slides for BP CoC requirements Compliance -->
+                    <div class="carousel-slide active">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/9.-_Page1.jpg" alt="BP CoC Compliance Page 1" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ความสอดคล้องต่อข้อกำหนด BP CoC - หน้า 1</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://img2.pic.in.th/pic/9.-_Page2.jpg" alt="BP CoC Compliance Page 2" onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Image+Load+Error';">
+                        <p class="text-sm text-gray-600 mt-2">ความสอดคล้องต่อข้อกำหนด BP CoC - หน้า 2</p>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <button class="carousel-nav-button prev">&#10094;</button>
+                    <button class="carousel-nav-button next">&#10095;</button>
+
+                    <!-- Dots for navigation -->
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
                 </div>
             </div>
 
@@ -1149,7 +1170,9 @@
             carouselsData.freedomOfAssociationCarousel = new Carousel('freedomOfAssociationCarousel');
             carouselsData.peopleRequirementCarousel = new Carousel('peopleRequirementCarousel');
             carouselsData.dataPrivacyCarousel = new Carousel('dataPrivacyCarousel');
-            carouselsData.prohibitedBusinessPracticesCarousel = new Carousel('prohibitedBusinessPracticesCarousel'); // New carousel initialization
+            carouselsData.prohibitedBusinessPracticesCarousel = new Carousel('prohibitedBusinessPracticesCarousel');
+            // Initialize the new carousel for BP CoC Compliance
+            carouselsData.bpCocComplianceCarousel = new Carousel('bpCocComplianceCarousel');
             console.log("All carousels initialized successfully.");
         });
 
